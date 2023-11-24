@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Geral
@@ -40,11 +42,6 @@ public class Exemplo4 extends javax.swing.JFrame {
         jCkbIngles.setText("Ingles");
 
         jCkbInformatica.setText("Informatica");
-        jCkbInformatica.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCkbInformaticaActionPerformed(evt);
-            }
-        });
 
         jButtonVerificar.setText("Verificar");
         jButtonVerificar.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +105,18 @@ public class Exemplo4 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerificarActionPerformed
-        // TODO add your handling code here:
+        String selecao = "Selecionados: ";
+        if(jCkbIngles.isSelected()){
+            selecao+="\n"+jCkbIngles.getText();
+        }
+        if(jCkbInformatica.isSelected()){
+            selecao+="\n"+jCkbInformatica.getText();
+        }
+        if((!jCkbIngles.isSelected())&&(!jCkbInformatica.isSelected())){
+        JOptionPane.showMessageDialog(null, "Nenhum curso selecionado!");
+    }else{
+        JOptionPane.showMessageDialog(null, selecao);
+        }
     }//GEN-LAST:event_jButtonVerificarActionPerformed
 
     private void jButtonMarcarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMarcarActionPerformed
@@ -120,10 +128,6 @@ public class Exemplo4 extends javax.swing.JFrame {
         jCkbInformatica.setSelected(false);
         jCkbIngles.setSelected(false);
     }//GEN-LAST:event_jButtonDesmarcarActionPerformed
-
-    private void jCkbInformaticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCkbInformaticaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCkbInformaticaActionPerformed
 
     /**
      * @param args the command line arguments
