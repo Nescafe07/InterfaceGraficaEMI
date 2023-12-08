@@ -33,7 +33,7 @@ public class Exemplo5 extends javax.swing.JFrame {
         jRbtFeminino = new javax.swing.JRadioButton();
         jBtnVerificar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         buttonGroup2.add(jRbtMasculino);
         jRbtMasculino.setText("Masculino ");
@@ -87,6 +87,7 @@ public class Exemplo5 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRbtMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRbtMasculinoActionPerformed

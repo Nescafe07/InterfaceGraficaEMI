@@ -17,6 +17,7 @@ public class Exemplo7 extends javax.swing.JFrame {
      */
     public Exemplo7() {
         initComponents();
+        
     }
 
     /**
@@ -35,7 +36,7 @@ public class Exemplo7 extends javax.swing.JFrame {
         jTextFieldResultado = new javax.swing.JTextField();
         jBtnCalcular = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLbValor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLbValor.setText("Valor");
@@ -92,6 +93,7 @@ public class Exemplo7 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldResultadoActionPerformed
